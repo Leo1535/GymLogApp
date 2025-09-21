@@ -1,97 +1,64 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+GymLog: A Sua Ficha de Treino Digital
+Integrantes do Grupo
+Leonardo Antonio da Silva
 
-# Getting Started
+Gabriel Gaioti Pinto
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+Otavio Augusto
 
-## Step 1: Start Metro
+1. Sobre o Projeto
+Problema a Ser Resolvido
+Frequentadores de academia, especialmente iniciantes e intermediários, muitas vezes dependem de fichas de treino em papel ou anotações desorganizadas no telemóvel. Isto torna difícil acompanhar o progresso, lembrar as cargas corretas para cada exercício e visualizar a rotina do dia, o que pode levar à desmotivação e a treinos menos eficientes.
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+Solução Proposta
+O GymLog funciona como uma ficha de treino digital e inteligente. Ele permite que o utilizador cadastre os seus treinos (ex: Treino A, B, C) e os exercícios correspondentes, incluindo informações como séries, repetições e a última carga utilizada. Ao chegar na academia, o utilizador pode simplesmente abrir a aplicação, selecionar o treino do dia e seguir a lista de exercícios, atualizando as cargas conforme progride e garantindo um acompanhamento preciso da sua evolução.
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+Justificativa Pessoal
+Como praticantes de musculação, sentimos na pele a dificuldade de gerir a nossa evolução. Muitas vezes, chegamos para treinar sem lembrar exatamente qual foi a carga que usámos na semana anterior num determinado exercício. Ter uma aplicação simples para registar e consultar estas informações diretamente no telemóvel tornará os nossos treinos mais produtivos e ajudar-nos-á a visualizar claramente o nosso progresso, servindo como uma grande fonte de motivação.
 
-```sh
-# Using npm
-npm start
+2. Diagrama Entidade-Relacionamento (DER) da API
+A estrutura de dados da API foi modelada para ser simples e eficiente, focada no relacionamento entre utilizadores e os seus respetivos exercícios.
 
-# OR using Yarn
-yarn start
-```
+Tabela: usuarios
+| Coluna | Tipo | Descrição |
+| :--- | :--- | :--- |
+| id | INT (PRIMARY KEY) | Identificador único do utilizador |
+| nome | VARCHAR | Nome do utilizador |
+| email | VARCHAR | E-mail de login (único) |
+| senha | VARCHAR | Senha (armazenada com hash) |
 
-## Step 2: Build and run your app
+Tabela: exercicios
+| Coluna | Tipo | Descrição |
+| :--- | :--- | :--- |
+| id | INT (PRIMARY KEY) | Identificador único do exercício |
+| nome | VARCHAR | Nome do exercício (Ex: Supino Reto) |
+| carga | DECIMAL | Carga utilizada em kg (Ex: 25.5) |
+| series | INT | Número de séries (Ex: 4) |
+| repeticoes | VARCHAR | Repetições (Ex: "10-12") |
+| letra_treino | CHAR(1) | Agrupador do treino (Ex: 'A', 'B', 'C') |
+| usuario_id | INT (FOREIGN KEY) | Liga o exercício ao id da tabela usuarios |
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+3. Estrutura de Pastas do Projeto
+O projeto segue uma estrutura de monorepo, contendo a API e a aplicação front-end no mesmo repositório para facilitar o desenvolvimento e o versionamento.
 
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+/Projeto-gymlog
+|
+|-- /api/           # Código da API em Node.js
+|   |-- /src
+|       |-- /controllers
+|       |-- /routes
+|       |-- /services
+|   |-- package.json
+|
+|-- /app/           # Código do Aplicativo em React Native
+|   |-- /GymLogApp
+|       |-- /src
+|           |-- /screens
+|       |-- App.tsx
+|       |-- package.json
+|
+|-- .github/        # Workflows de CI/CD (GitHub Actions)
+|
+|-- .gitignore
+|
+|-- README.md       # Este ficheiro
