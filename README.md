@@ -42,23 +42,23 @@ Tabela: exercicios
 O projeto segue uma estrutura de monorepo, contendo a API e a aplicação front-end no mesmo repositório para facilitar o desenvolvimento e o versionamento.
 
 /Projeto-gymlog
-|
-|-- /api/           # Código da API em Node.js
-|   |-- /src
-|       |-- /controllers
-|       |-- /routes
-|       |-- /services
-|   |-- package.json
-|
-|-- /app/           # Código do Aplicativo em React Native
-|   |-- /GymLogApp
-|       |-- /src
-|           |-- /screens
-|       |-- App.tsx
-|       |-- package.json
-|
-|-- .github/        # Workflows de CI/CD (GitHub Actions)
-|
-|-- .gitignore
-|
-|-- README.md       # Este ficheiro
+│
+├── /api/           # Código da API em Node.js
+│   └── /src
+│       ├── /controllers
+│       ├── /routes
+│       └── /services
+│   └── package.json
+│
+├── /app/           # Código do Aplicativo em React Native
+│   └── /GymLogApp
+│       ├── /src
+│       │   └── /screens
+│       ├── App.tsx
+│       └── package.json
+│
+├── /.github/       # Workflows de CI/CD (GitHub Actions)
+│
+├── .gitignore
+│
+└── README.md       # Este ficheiro
