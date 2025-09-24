@@ -69,3 +69,6 @@ O projeto segue uma estrutura de monorepo, contendo a API e a aplicação front-
 ├── .gitignore
 │
 └── README.md       # Este ficheiro
+
+<img width="485" height="1011" alt="image" src="https://github.com/user-attachments/assets/5222e1c7-f0e3-4232-bacb-7a7e5427d476" />
+
