@@ -1,5 +1,6 @@
 GymLog: A Sua Ficha de Treino Digital
 Integrantes do Grupo
+
 Leonardo Antonio da Silva
 
 Gabriel Gaioti Pinto
