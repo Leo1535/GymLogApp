@@ -72,3 +72,9 @@ O projeto segue uma estrutura de monorepo, contendo a API e a aplicação front-
 
 <img width="485" height="1011" alt="image" src="https://github.com/user-attachments/assets/5222e1c7-f0e3-4232-bacb-7a7e5427d476" />
 
+<img width="488" height="1006" alt="image" src="https://github.com/user-attachments/assets/15935bd8-28cb-4bd7-8318-291266ac6b2f" />
+
+<img width="488" height="1016" alt="image" src="https://github.com/user-attachments/assets/b07e3542-4dbf-4415-91bd-32056bb87666" />
+
+
+
