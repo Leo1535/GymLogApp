@@ -8,16 +8,22 @@ Gabriel Gaioti Pinto
 Otavio Augusto
 
 1. Sobre o Projeto
+
+
 Problema a Ser Resolvido
+
 Frequentadores de academia, especialmente iniciantes e intermediários, muitas vezes dependem de fichas de treino em papel ou anotações desorganizadas no telemóvel. Isto torna difícil acompanhar o progresso, lembrar as cargas corretas para cada exercício e visualizar a rotina do dia, o que pode levar à desmotivação e a treinos menos eficientes.
 
 Solução Proposta
+
 O GymLog funciona como uma ficha de treino digital e inteligente. Ele permite que o utilizador cadastre os seus treinos (ex: Treino A, B, C) e os exercícios correspondentes, incluindo informações como séries, repetições e a última carga utilizada. Ao chegar na academia, o utilizador pode simplesmente abrir a aplicação, selecionar o treino do dia e seguir a lista de exercícios, atualizando as cargas conforme progride e garantindo um acompanhamento preciso da sua evolução.
 
 Justificativa Pessoal
+
 Como praticantes de musculação, sentimos na pele a dificuldade de gerir a nossa evolução. Muitas vezes, chegamos para treinar sem lembrar exatamente qual foi a carga que usámos na semana anterior num determinado exercício. Ter uma aplicação simples para registar e consultar estas informações diretamente no telemóvel tornará os nossos treinos mais produtivos e ajudar-nos-á a visualizar claramente o nosso progresso, servindo como uma grande fonte de motivação.
 
 2. Diagrama Entidade-Relacionamento (DER) da API
+
 A estrutura de dados da API foi modelada para ser simples e eficiente, focada no relacionamento entre utilizadores e os seus respetivos exercícios.
 
 Tabela: usuarios
